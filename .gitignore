@@ -2,6 +2,7 @@
 node_modules/
 src/**/*.js
 test/**/*.js
+tini.module.js
 *.map
 *.d.ts
 *.tgz

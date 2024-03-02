@@ -1,5 +1,5 @@
 {
-  "name": "@tinijs/server-basic",
+  "name": "@tinijs/content",
   "version": "0.0.1",
   "description": "A basic file-based content system.",
   "author": "Lam Nhan",
@@ -18,17 +18,11 @@
     "!**/*.ts",
     "**/*.d.ts",
     "11ty",
-    "assets"
+    "assets",
+    "tini.module.js",
+    "tini.module.d.ts",
+    "tini.module.js.map"
   ],
-  "tiniServer": {
-    "copy": {
-      "assets": "content"
-    },
-    "scripts": {
-      "content:build": "tini server build basic"
-    },
-    "buildCommand": "content:build"
-  },
   "scripts": {
     "build": "tsc",
     "lint": "gts lint",
@@ -40,6 +34,9 @@
   },
   "bugs": {
     "url": "https://github.com/tinijs/servers/issues"
+  },
+  "peerDependencies": {
+    "@tinijs/cli": "file:../cli/tinijs-cli-0.16.0.tgz"
   },
   "dependencies": {
     "@11ty/eleventy": "^2.0.1",
