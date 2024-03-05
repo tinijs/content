@@ -1,14 +1,18 @@
 {
   "extends": "./node_modules/gts/tsconfig-google.json",
   "compilerOptions": {
-    "module": "ESNext",
-    "lib": ["DOM", "ESNext"],
-    "moduleResolution": "node",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "target": "ESNext",
+    "lib": ["ESNext"],
     "skipLibCheck": true
   },
   "include": [
-    "src/**/*.ts",
+    "lib/**/*.ts",
+    "cli/**/*.ts",
+    "module/**/*.ts",
     "test/**/*.ts",
-    "tini.module.ts"
+    "tini.module.ts",
+    "public-api.ts"
   ]
 }

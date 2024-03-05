@@ -1,2 +1,6 @@
-src/**/*.js
+lib/**/*.js
+cli/**/*.js
+module/**/*.js
 test/**/*.js
+tini.module.js
+public-api.js

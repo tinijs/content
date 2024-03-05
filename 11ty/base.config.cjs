@@ -5,8 +5,8 @@ const pluginBundle = require('@11ty/eleventy-plugin-bundle');
 const YAML = require('yaml');
 const TOML = require('@iarna/toml');
 
-const pluginElem = require('./elem.plugin.js');
-const pluginImage = require('./image.plugin.js');
+const pluginElem = require('./elem.plugin.cjs');
+const pluginImage = require('./image.plugin.cjs');
 
 module.exports = function (eleventyConfig, options) {
   const {

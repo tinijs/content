@@ -1,9 +1,12 @@
 {
   "files.exclude": {
     ".vscode/": true,
-    "**/src/**/*.js": true,
-    "**/test/**/*.js": true,
+    "lib/**/*.js": true,
+    "cli/**/*.js": true,
+    "module/**/*.js": true,
+    "test/**/*.js": true,
     "tini.module.js": true,
+    "public-api.js": true,
     "**/*.d.ts": true,
     "**/*.map": true
   }

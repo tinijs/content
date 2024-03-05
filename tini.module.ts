@@ -1,6 +1,6 @@
 import {defineTiniModule} from '@tinijs/cli';
 
-import build from './src/scripts/build';
+import build from './module/build.js';
 
 export default defineTiniModule({
   init: {
