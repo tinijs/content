@@ -1,1 +1,1 @@
-export * from './lib/index.js';
+export * from './cli/commands/build.js';

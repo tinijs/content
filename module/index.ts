@@ -1,12 +1,13 @@
 import {defineTiniModule} from '@tinijs/cli';
 
-import build from './module/build.js';
-
 export default defineTiniModule({
+  meta: {
+    name: '@tinijs/content',
+  },
   init: {
     copy: {
       assets: 'content',
     },
   },
-  build,
+  async setup(options, tini) {},
 });

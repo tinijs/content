@@ -8,11 +8,6 @@
     "skipLibCheck": true
   },
   "include": [
-    "lib/**/*.ts",
-    "cli/**/*.ts",
-    "module/**/*.ts",
-    "test/**/*.ts",
-    "tini.module.ts",
-    "public-api.ts"
+    "**/*.ts"
   ]
 }

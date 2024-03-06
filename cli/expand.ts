@@ -1,4 +1,4 @@
-import {TiniCLI, errorInvalidSubCommand} from '@tinijs/cli';
+import {TiniCli, errorInvalidSubCommand} from '@tinijs/cli';
 
 import buildSubCommand from './commands/build.js';
 
@@ -6,7 +6,7 @@ enum SubCommands {
   Build = 'build',
 }
 
-function rootCommand(subCommand: string) {
+function rootHandler(subCommand: string) {
   switch (subCommand) {
     case SubCommands.Build:
       buildSubCommand();
@@ -17,9 +17,9 @@ function rootCommand(subCommand: string) {
   }
 }
 
-export default function (tiniCLI: TiniCLI) {
-  return tiniCLI
+export default function (tiniCli: TiniCli) {
+  return tiniCli
     .command('content <subCommand>')
     .description('Tools for the @tinijs/content module.')
-    .action(rootCommand);
+    .action(rootHandler);
 }
