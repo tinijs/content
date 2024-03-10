@@ -1,4 +1,4 @@
-import {defineTiniModule} from '@tinijs/cli';
+import {defineTiniModule} from 'tinijs';
 
 export default defineTiniModule({
   meta: {
