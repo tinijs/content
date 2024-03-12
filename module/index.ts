@@ -1,13 +1,24 @@
-import {defineTiniModule} from 'tinijs';
+import {defineTiniModule} from '@tinijs/core';
 
-export default defineTiniModule({
+import contentBuildCommand from '../cli/commands/content-build.js';
+
+export type ContentModuleOptions = Parameters<typeof contentBuildCommand>[0];
+
+export default defineTiniModule<ContentModuleOptions>({
   meta: {
     name: '@tinijs/content',
   },
-  init: {
-    copy: {
-      assets: 'content',
-    },
+  init() {
+    return {
+      copy: {
+        assets: 'content',
+      },
+    };
   },
-  async setup(options, tini) {},
+  async setup(options, tini) {
+    tini.hook(
+      'build:after',
+      () => contentBuildCommand(options) as Promise<void>
+    );
+  },
 });
